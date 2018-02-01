@@ -5,9 +5,18 @@ function getGridValue() {
 }
 
 function getRobotsValue() {
-    const data = fs.readFileSync('input.txt', 'utf8').split('\n');
-    data.shift();
-    return data;
+    const robotsValue = fs.readFileSync('input.txt', 'utf8').split('\n');
+    robotsValue.shift();
+
+    let index;
+    // Transform robot input 
+    return robotsValue.reduce((result, robot) => {
+        index = robotsValue.indexOf(robot);
+        if(index % 2 === 0) {
+            result.push(robot.concat(" ") + robotsValue[index + 1]);
+        }
+        return result;
+    }, []);
 }
 
 module.exports = {
