@@ -6,11 +6,15 @@ class Grid {
     }
 
     outOfGrid(x, y) {
-        return (x < 0 || y < 0 || x > this.x || yAxis > this.y);
+        return (x < 0 || y < 0 || x > this.x || y > this.y);
     }
 
-    setScent() {
+    setScent(scent) {
         this.scents.push(scent);
+    }
+
+    isScent(value) {
+        return this.scents.find(scent => scent === value)
     }
 }
 

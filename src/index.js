@@ -3,4 +3,4 @@ const getRobotsValue = require('./input').getRobotsValue;
 
 const martianRobot = require('./main');
 
-martianRobot(getGridValue(), getRobotsValue());
+console.log(martianRobot(getGridValue(), getRobotsValue()));

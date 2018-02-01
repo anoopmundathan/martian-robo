@@ -12,12 +12,10 @@ class Robot {
             'L': {'N': 'W', 'E': 'N', 'S': 'E', 'W': 'S'},
             'R': {'N': 'E', 'E': 'S', 'S': 'W', 'W': 'N'}
         };
-
         this.facing = turning[direction][this.facing];
     }
 
     move() {
-        
         const fDirection = {
             'N': {x: this.x, y: this.y + 1},
             'S': {x: this.x, y: this.y - 1},

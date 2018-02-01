@@ -16,4 +16,5 @@ describe('Get Input Data', () => {
             expect(result).to.equal(['1 1 E RFRFRFRF', '3 2 N FRRFLLFFRRFLL']);
         });
     });
+    
 })
